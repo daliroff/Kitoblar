@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register – CodePath</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body class="auth-body">
+
+<div class="auth-bg">
+  <div class="glow g1"></div>
+  <div class="glow g2"></div>
+  <div class="grid-overlay"></div>
+</div>
+
+<div class="auth-wrap">
+  <a href="index.html" class="auth-logo"><span class="logo-icon">&lt;/&gt;</span><span>CodePath</span></a>
+  <div class="auth-card">
+    <div class="auth-head">
+      <h1>Create Your Account</h1>
+      <p>Join thousands of learners. It's 100% free.</p>
+    </div>
+    <div class="alert" id="form-alert"></div>
+    <form id="register-form" novalidate>
+      <div class="row-2">
+        <div class="fgroup">
+          <label for="firstName">First Name <span class="req">*</span></label>
+          <input type="text" id="firstName" placeholder="John" autocomplete="given-name" />
+        </div>
+        <div class="fgroup">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" placeholder="Doe" autocomplete="family-name" />
+        </div>
+      </div>
+      <div class="fgroup">
+        <label for="email">Email Address <span class="req">*</span></label>
+        <input type="email" id="email" placeholder="john@example.com" autocomplete="email" />
+      </div>
+      <div class="fgroup">
+        <label for="password">Password <span class="req">*</span></label>
+        <div class="pw-wrap">
+          <input type="password" id="password" placeholder="At least 6 characters" autocomplete="new-password" />
+          <button type="button" class="pw-toggle" id="pw-toggle">&#128065;</button>
+        </div>
+      </div>
+      <div class="fgroup">
+        <label for="level">Your Skill Level <span class="req">*</span></label>
+        <select id="level">
+          <option value="">-- Select your level --</option>
+          <option value="Absolute Beginner">Absolute Beginner (never coded before)</option>
+          <option value="Beginner">Beginner (tried a little coding)</option>
+          <option value="Intermediate">Intermediate (know some basics)</option>
+          <option value="Advanced">Advanced (experienced developer)</option>
+        </select>
+      </div>
+      <div class="fgroup">
+        <label for="goal">Your Main Goal</label>
+        <select id="goal">
+          <option value="">-- Optional --</option>
+          <option value="Get a job">Get a developer job</option>
+          <option value="Freelance">Start freelancing</option>
+          <option value="Build projects">Build my own projects</option>
+          <option value="Learn for fun">Learn for fun</option>
+          <option value="Improve skills">Improve my current skills</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary btn-full">Create Free Account</button>
+    </form>
+    <p class="auth-switch">Already have an account? <a href="login.html">Log in</a></p>
+  </div>
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>
