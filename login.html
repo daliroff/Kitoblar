@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log In – CodePath</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body class="auth-body">
+
+<div class="auth-bg">
+  <div class="glow g1"></div>
+  <div class="glow g2"></div>
+  <div class="grid-overlay"></div>
+</div>
+
+<div class="auth-wrap">
+  <a href="index.html" class="auth-logo"><span class="logo-icon">&lt;/&gt;</span><span>CodePath</span></a>
+  <div class="auth-card">
+    <div class="auth-head">
+      <h1>Welcome Back!</h1>
+      <p>Continue your learning journey.</p>
+    </div>
+    <div class="alert" id="form-alert"></div>
+    <form id="login-form" novalidate>
+      <div class="fgroup">
+        <label for="login-email">Email Address</label>
+        <input type="email" id="login-email" placeholder="john@example.com" autocomplete="email" />
+      </div>
+      <div class="fgroup">
+        <label for="login-password">Password</label>
+        <div class="pw-wrap">
+          <input type="password" id="login-password" placeholder="Your password" autocomplete="current-password" />
+          <button type="button" class="pw-toggle" id="pw-toggle">&#128065;</button>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-full">Log In</button>
+    </form>
+    <p class="auth-switch">Don't have an account? <a href="register.html">Create one free</a></p>
+  </div>
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>
