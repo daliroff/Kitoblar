@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard – CodePath</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body class="dash-page">
+
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo"><span class="logo-icon">&lt;/&gt;</span><span>CodePath</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#courses">Courses</a></li>
+    </ul>
+    <div class="nav-actions dash-nav-actions">
+      <a href="dashboard.html" class="btn btn-outline">Dashboard</a>
+      <button class="btn btn-ghost" id="logout-btn">Log Out</button>
+      <a href="dashboard.html" class="avatar-btn" id="avatar-btn">?</a>
+    </div>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" id="mobile-close">&#10005;</button>
+  <a href="index.html">Home</a>
+  <a href="index.html#courses">Courses</a>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="#" id="mobile-logout">Log Out</a>
+</div>
+
+<div class="dash-header">
+  <div class="dash-header-inner">
+    <p class="dash-greet">Welcome back,</p>
+    <h1 id="dash-name">Loading...</h1>
+    <div class="dash-stats">
+      <div class="dstat"><div class="dstat-n" id="stat-completed">0</div><div class="dstat-l">Courses Done</div></div>
+      <div class="dstat"><div class="dstat-n" id="stat-lessons">0</div><div class="dstat-l">Lessons Done</div></div>
+      <div class="dstat"><div class="dstat-n" id="stat-badges">0</div><div class="dstat-l">Badges Earned</div></div>
+      <div class="dstat"><div class="dstat-n" id="stat-streak">0</div><div class="dstat-l">Day Streak</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="dash-body">
+  <div class="dash-main">
+    <div>
+      <div class="dash-section-title">&#127891; Your Courses</div>
+      <div class="dash-courses" id="dash-courses"></div>
+    </div>
+    <div>
+      <div class="dash-section-title">&#127942; Your Badges</div>
+      <div class="badge-list" id="badge-list"></div>
+    </div>
+  </div>
+  <div class="dash-side">
+    <div class="profile-card">
+      <div class="p-avatar" id="p-avatar">?</div>
+      <div class="p-name" id="p-name"></div>
+      <div class="p-email" id="p-email"></div>
+      <div class="p-rows">
+        <div class="p-row"><span class="p-key">Level</span><span class="p-val" id="p-level"></span></div>
+        <div class="p-row"><span class="p-key">Goal</span><span class="p-val" id="p-goal"></span></div>
+        <div class="p-row"><span class="p-key">Joined</span><span class="p-val" id="p-joined"></span></div>
+      </div>
+    </div>
+    <a href="index.html#courses" class="btn btn-primary" style="width:100%;justify-content:center;display:flex;margin-bottom:10px">Browse All Courses</a>
+  </div>
+</div>
+
+<script src="js/courses-data.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

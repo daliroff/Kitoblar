@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course – CodePath</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body class="course-page">
+
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo"><span class="logo-icon">&lt;/&gt;</span><span>CodePath</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#courses">Courses</a></li>
+    </ul>
+    <div class="nav-actions" id="nav-actions">
+      <a href="login.html" class="btn btn-outline">Log In</a>
+      <a href="register.html" class="btn btn-primary">Get Started</a>
+    </div>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" id="mobile-close">&#10005;</button>
+  <a href="index.html">Home</a>
+  <a href="index.html#courses">Courses</a>
+  <a href="register.html">Register</a>
+  <a href="login.html">Log In</a>
+</div>
+
+<div class="course-hero">
+  <div class="course-hero-inner">
+    <div id="course-thumb" class="course-thumb-hero cc-html"><span id="course-emoji">&#127760;</span></div>
+    <div class="course-hero-text">
+      <div class="breadcrumb"><a href="index.html#courses">&larr; All Courses</a></div>
+      <h1 id="course-title">Loading...</h1>
+      <p id="course-desc"></p>
+      <div class="course-meta-row">
+        <span id="course-level-badge"></span>
+        <span>&#9200; <span id="course-duration"></span></span>
+        <span>&#128249; <span id="course-instructor"></span></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="course-layout">
+  <div class="course-main">
+    <div class="video-wrap">
+      <iframe id="course-video" src="" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    </div>
+    <div class="about-course">
+      <h2>About This Course</h2>
+      <p id="course-about"></p>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="scard" id="progress-card">
+      <div class="scard-hd">Your Progress</div>
+      <div class="scard-bd">
+        <div class="prog-bar-bg"><div class="prog-bar-fill" id="prog-fill"></div></div>
+        <div class="prog-text" id="prog-text">Log in to track progress</div>
+        <div id="login-prompt-box" class="login-prompt" style="display:none">
+          <p style="margin-bottom:8px">&#128274; Track your progress for free</p>
+          <a href="register.html" class="btn btn-primary" style="width:100%;justify-content:center;display:flex">Create Free Account</a>
+          <p style="margin-top:8px;color:var(--muted)">Already registered? <a href="login.html">Log in</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="scard">
+      <div class="scard-hd">Curriculum (<span id="lesson-count">0</span> lessons)</div>
+      <div class="scard-bd">
+        <div class="cur-list" id="cur-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/courses-data.js"></script>
+<script src="js/course.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
